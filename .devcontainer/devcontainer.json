@@ -5,9 +5,7 @@
     "build": {
         "dockerfile": "Dockerfile",
         "args": {
-            // Update the VARIANT arg to pick a Swift version
-            "VARIANT": "5.5",
-            // Options
+            "VARIANT": "5.5.2-focal",
             "NODE_VERSION": "lts/*"
         }
     },
@@ -27,6 +25,8 @@
     // Add the IDs of extensions you want installed when the container is created.
     "extensions": [
         "sswg.swift-lang",
+        "vknabel.vscode-apple-swift-format",
+        "dtsvet.vscode-wasm",
         "esbenp.prettier-vscode",
         "mhutchie.git-graph",
     ],
