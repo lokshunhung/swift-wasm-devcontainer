@@ -24,6 +24,7 @@
 
     // Add the IDs of extensions you want installed when the container is created.
     "extensions": [
+        "editorconfig.editorconfig",
         "sswg.swift-lang",
         "vknabel.vscode-apple-swift-format",
         "dtsvet.vscode-wasm",

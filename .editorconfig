@@ -1,0 +1,9 @@
+root = true
+
+[*.{js,json,ts}]
+indent_style = space
+indent_size = 4
+
+[*.swift]
+indent_style = space
+indent_size = 4
