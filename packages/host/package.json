@@ -1,0 +1,9 @@
+{
+    "name": "hello-bin",
+    "version": "0.0.1",
+    "license": "UNLICENSED",
+    "private": true,
+    "scripts": {
+        "start": "node --experimental-wasi-unstable-preview1 index.js"
+    }
+}

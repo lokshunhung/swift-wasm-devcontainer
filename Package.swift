@@ -3,9 +3,16 @@
 import PackageDescription
 
 let package = Package(
-    name: "Pkg",
+    name: "Hello",
     dependencies: [
         .package(url: "https://github.com/apple/swift-format.git", .branch("swift-5.5-branch"))
     ],
-    targets: []
+    targets: [
+        .executableTarget(
+            name: "Hello",
+            dependencies: []),
+        .testTarget(
+            name: "HelloTests",
+            dependencies: ["Hello"]),
+    ]
 )
