@@ -11,7 +11,10 @@ let package = Package(
         .executableTarget(
             name: "Hello",
             dependencies: [
-                .product(name: "JavaScriptKit", package: "JavaScriptKit")
+                // .product(name: "JavaScriptKit", package: "JavaScriptKit")
+            ],
+            linkerSettings: [
+                .unsafeFlags(["-Xlinker", "--export=wasm_main"], .when(platforms: [.wasi]))
             ]),
         .testTarget(
             name: "HelloTests",

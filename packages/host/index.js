@@ -21,6 +21,10 @@ async function main() {
     const instance = await WebAssembly.instantiate(wasmModule, importObject);
 
     wasi.start(instance);
+
+    console.log("js started");
+
+    instance.exports.wasm_main();
 }
 
 if (require.main === module) {

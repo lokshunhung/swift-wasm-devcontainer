@@ -1,0 +1,22 @@
+{
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug Hello",
+            "program": "${workspaceFolder:swift-wasm-devcontainer}/.build/debug/Hello",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-wasm-devcontainer}",
+            "preLaunchTask": "swift: Build Debug Hello"
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Release Hello",
+            "program": "${workspaceFolder:swift-wasm-devcontainer}/.build/release/Hello",
+            "args": [],
+            "cwd": "${workspaceFolder:swift-wasm-devcontainer}",
+            "preLaunchTask": "swift: Build Release Hello"
+        }
+    ]
+}
