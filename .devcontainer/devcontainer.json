@@ -5,7 +5,7 @@
     "build": {
         "dockerfile": "Dockerfile",
         "args": {
-            "VARIANT": "5.5.2-focal",
+            "VARIANT": "5.7.0-focal",
             "NODE_VERSION": "lts/*"
         }
     },

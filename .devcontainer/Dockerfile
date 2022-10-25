@@ -27,7 +27,7 @@ RUN bash /tmp/library-scripts/node-debian.sh "${NVM_DIR}" "${NODE_VERSION}" "${U
     && rm -rf /var/lib/apt/lists/* /tmp/library-scripts
 
 # [Optional] Uncomment this section to install additional OS packages you may want.
-ARG SWIFT_WASM_TAG="swift-wasm-5.5.0-RELEASE"
+ARG SWIFT_WASM_TAG="swift-wasm-5.7.1-RELEASE"
 ARG SWIFT_WASM_PLATFORM_SUFFIX="ubuntu20.04_x86_64.tar.gz"
 ENV SWIFT_WASM_ROOT="/swift-wasm/usr/bin"
 RUN export SWIFT_BIN_URL="https://github.com/swiftwasm/swift/releases/download/$SWIFT_WASM_TAG/$SWIFT_WASM_TAG-$SWIFT_WASM_PLATFORM_SUFFIX" \
