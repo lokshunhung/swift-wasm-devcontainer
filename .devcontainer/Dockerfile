@@ -1,7 +1,7 @@
 # https://github.com/microsoft/vscode-dev-containers/blob/2d7848342c532515ae710c675ceedeac5b403d80/containers/swift/.devcontainer/Dockerfile
 
 ARG VARIANT=5.5-focal
-FROM swift:${VARIANT}
+FROM arm64v8/swift:${VARIANT}
 
 # [Option] Install zsh
 ARG INSTALL_ZSH="true"
@@ -28,7 +28,7 @@ RUN bash /tmp/library-scripts/node-debian.sh "${NVM_DIR}" "${NODE_VERSION}" "${U
 
 # [Optional] Uncomment this section to install additional OS packages you may want.
 ARG SWIFT_WASM_TAG="swift-wasm-5.7.1-RELEASE"
-ARG SWIFT_WASM_PLATFORM_SUFFIX="ubuntu20.04_x86_64.tar.gz"
+ARG SWIFT_WASM_PLATFORM_SUFFIX="ubuntu20.04_aarch64.tar.gz"
 ENV SWIFT_WASM_ROOT="/swift-wasm/usr/bin"
 RUN export SWIFT_BIN_URL="https://github.com/swiftwasm/swift/releases/download/$SWIFT_WASM_TAG/$SWIFT_WASM_TAG-$SWIFT_WASM_PLATFORM_SUFFIX" \
     && mkdir -p /swift-wasm \
